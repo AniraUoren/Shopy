@@ -1,0 +1,74 @@
+@import "variables"
+@import "mixins"
+@import "fonts"
+
+.banner
+  height: 650px
+  background: url("../img/banner1.png") no-repeat right, linear-gradient(#e9e9ec, #f1f1f4)
+  background-size: 728px 649px
+  &__wrap
+    width: 1200px
+    height: 100%
+    padding: 0
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: flex-start
+  &-buttons
+    list-style: none
+    width: 10px
+    height: 88px
+    margin-right: 88px
+    &__li
+      width: 10px
+      height: 21px
+      background-color: $white
+      margin-bottom: 5px
+      cursor: pointer
+    &__li-active
+      width: 10px
+      height: 36px
+      background-color: #ff5912
+      cursor: default
+    &__link
+      font-size: 0rem
+
+.banner-description
+  &_el
+    &__head
+      color: $orange
+      font-family: "Harmonia Sans Pro Cyr"
+      font-size: 3.25rem
+      font-weight: bold
+      text-transform: uppercase
+      margin-bottom: 29px
+    &__bold-description
+      color: $dark_grey_text_p
+      font-family: "Harmonia Sans Pro Cyr"
+      font-size: 1.125rem
+      line-height: 1.125rem
+      margin-bottom: 13px
+    &__light-description
+      color: $light_grey_text_p
+      font-family: "Harmonia Sans Pro Cyr"
+      font-size: 1rem
+      line-height: 1rem
+      margin-bottom: 63px
+
+.order-block
+  display: flex
+  &__price
+    color: $dark_grey_text_main
+    font-family: "Harmonia Sans Pro Cyr"
+    font-size: 1.125rem
+    margin-right: 31px
+  &__link
+    color: $orange
+    font-family: "Harmonia Sans Pro Cyr"
+    font-size: 1.125rem
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+  &__icon
+    width: 24px
+    height: 17px
