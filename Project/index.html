@@ -3,69 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <title>Shopy</title>
+
     <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?u8vidh">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-    <div>
-        <div>
-            <a href="mailto:">
-                <img src="img/Mail_Ico.png" alt="Email">
-                info@shopy.com
-            </a>
-            <a href="callto:">
-                <img src="img/Phone_Ico.png" alt="Phone">
-                996 - 5553 - 453
-            </a>
-        </div>
-        <div>
-            <i class="socicon-facebook"></i>
-            <i class="socicon-twitter"></i>
-            <i class="socicon-googleplus"></i>
-            <i class="socicon-instagram"></i>
+<header class="header">
+    <div class="header_el">
+        <div class="small-header">
+            <div class="small-header_el contacts">
+                <a href="mailto:info@shopy.com" class="mail__link">
+                    <img src="img/Mail_Ico.png" alt="Email" class="mail__icon">
+                    info@shopy.com
+                </a>
+                <a href="callto:9965553453" class="phone__link">
+                    <img src="img/Phone_Ico.png" alt="Phone" class="phone__icon">
+                    996 - 5553 - 453
+                </a>
+            </div>
+            <div class="small-header_el socials">
+                <i class="socicon-facebook socials_el socials__facebook"></i>
+                <i class="socicon-twitter socials_el socials__twitter"></i>
+                <i class="socicon-googleplus socials_el socials__googleplus"></i>
+                <i class="socicon-instagram socials_el socials__instagram"></i>
+            </div>
         </div>
     </div>
-    <div>
-        <a href="index.html">
-            <img src="img/logotype.png" alt="Logotype">
-        </a>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Products</li>
-                <li>Hot Deals</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
-        <div>
-            <a href="#">
-                <img src="img/Search_Ico.png" alt="Search"></a>
-            <a href="#">
-                <img src="img/User_Ico.png" alt="User"></a>
-            <a href="#">
-                <img src="img/Cart_Ico.png" alt="Cart"></a>
+    <div class="header_el">
+        <div class="big-header">
+            <div class="big-header_el">
+                <a href="index.html" class="logo">
+                    <img src="img/logotype.png" alt="Logotype" class="logo__img">
+                </a>
+                <nav class="navbar">
+                    <ul class="navbar__ul">
+                        <li class="navbar__li"><a href="#" class="navbar__link navbar__active-link">Home</a></li>
+                        <li class="navbar__li"><a href="#" class="navbar__link">Products</a></li>
+                        <li class="navbar__li"><a href="#" class="navbar__link">Hot Deals</a></li>
+                        <li class="navbar__li"><a href="#" class="navbar__link">About</a></li>
+                        <li class="navbar__li"><a href="#" class="navbar__link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="big-header_el">
+                <a href="#" class="search search__link">
+                    <img src="img/Search_Ico.png" alt="Search" class="search__icon">
+                </a>
+                <a href="#" class="user user__link">
+                    <img src="img/User_Ico.png" alt="User" class="user__icon">
+                </a>
+                <a href="#" class="cart cart__link">
+                    <span class="cart__counter">5</span>
+                    <img src="img/Cart_Ico.png" alt="Cart" class="cart__icon">
+                </a>
+            </div>
         </div>
     </div>
 </header>
 
-<main>
-    <div>
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-        </ul>
-        <h3>FULL WINTER KIT</h3>
-        <p>Half Jacket + Skiny Trousers + Boot leather</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry </p>
+<main class="main">
+    <div class="main_el banner">
+        <div class="banner__wrap">
+            <ul class="banner_el banner-buttons">
+                <li class="banner-buttons__li"><a href="#" class="banner-buttons__link">1</a></li>
+                <li class="banner-buttons__li banner-buttons__li-active"><a href="#" class="banner-buttons__link">2</a></li>
+                <li class="banner-buttons__li"><a href="#" class="banner-buttons__link">3</a></li>
+            </ul>
+            <div class="banner_el banner-description">
+                <h3 class="banner-description_el__head">FULL WINTER KIT</h3>
+                <p class="banner-description_el banner-description_el__bold-description">Half Jacket + Skiny Trousers + Boot leather</p>
+                <p class="banner-description_el banner-description_el__light-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry </p>
 
-        <p>$120 : Price</p>
-        <a href="#">
-            <img src="img/Cart_Ico.png" alt="Cart">
-            Order Now
-        </a>
+                <div class="banner-description_el order-block">
+                    <p class="order-block__price">Price : 120$</p>
+                    <a href="#" class="order-block__link">
+                        <img src="img/Cart_Ico.png" alt="Cart" class="order-block__icon">
+                        Order Now
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+
     <div>
         <h3><span>NEW</span> ARRIVALS</h3>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
@@ -87,7 +106,7 @@
                 <p>$100</p>
             </div>
             <div>
-                <img src="img/Product4.jpg" alt="">
+                <img src="img/Product3.jpg" alt="">
                 <p>Reebok Track Jacket</p>
                 <p>$100</p>
             </div>
@@ -103,7 +122,7 @@
             <h3>FULL WINTER KIT</h3>
             <p>Half Jacket + Skiny Trousers + Boot leather</p>
             <a href="#">
-                <img src="img/Add_To_Cart_Ico_.png" alt="Add Product">
+                <img src="img/Add_To_Cart_Ico.png" alt="Add Product">
                 120 <span>$</span>
             </a>
         </div>
@@ -124,7 +143,7 @@
                     <div><span></span><span></span><span></span><span></span><span></span></div>
                     <p>100$</p>
                     <a href="#">
-                        <img src="img/Add_To_Cart_Ico_.png" alt="Add to Cart">
+                        <img src="img/Add_To_Cart_Ico.png" alt="Add to Cart">
                         add to cart
                     </a>
                 </div>
@@ -136,7 +155,7 @@
                     <div><span></span><span></span><span></span><span></span><span></span></div>
                     <p>100$</p>
                     <a href="#">
-                        <img src="img/Add_To_Cart_Ico_.png" alt="Add to Cart">
+                        <img src="img/Add_To_Cart_Ico.png" alt="Add to Cart">
                         add to cart
                     </a>
                 </div>
@@ -148,7 +167,7 @@
                     <div><span></span><span></span><span></span><span></span><span></span></div>
                     <p>100$</p>
                     <a href="#">
-                        <img src="img/Add_To_Cart_Ico_.png" alt="Add to Cart">
+                        <img src="img/Add_To_Cart_Ico.png" alt="Add to Cart">
                         add to cart
                     </a>
                 </div>
