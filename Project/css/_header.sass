@@ -4,6 +4,7 @@
 
 .header
   width: 100%
+  background-color: $white
   &_el
     display: flex
     border-bottom: 1px solid #e6e8eb
@@ -24,14 +25,19 @@
     font-size: 0.75rem
     font-weight: 400
     text-decoration: none
+    padding-left: 27px
     margin-right: 19px
+    position: relative
     &:hover
       text-decoration: underline
-  &__icon
-    margin-right: 9px
-    width: 18px
-    height: 11px
-
+    &:before
+      content: ""
+      width: 18px
+      height: 11px
+      position: absolute
+      left: 0
+      top: 2px
+      background: url('../img/icons/css_sprites.png') -5px -95px
 .phone
   &__link
     font-family: "Harmonia Sans Pro Cyr"
@@ -39,11 +45,18 @@
     font-size: 0.75rem
     font-weight: 400
     text-decoration: none
+    padding-left: 22px
+    position: relative
     &:hover
       text-decoration: underline
-  &__icon
-    width: 12px
-    height: 12px
+    &:before
+      content: ""
+      width: 12px
+      height: 12px
+      position: absolute
+      left: 0
+      top: 0
+      background: url('../img/icons/css_sprites.png') -132px -5px
 
 .socials
   &_el
@@ -84,12 +97,29 @@
     &:hover
       color: $orange
 
+.search
+  display: block
+  width: 18px
+  height: 18px
+  background: url('../img/icons/css_sprites.png') -33px -67px
+  &:hover
+    background-position: -5px -67px
+
 .user
   margin-left: 30px
+  display: block
+  width: 20px
+  height: 21px
+  background: url('../img/icons/css_sprites.png') -35px -36px
+  &:hover
+    background-position: -5px -36px
 
 .cart
   margin-left: 30px
   display: block
+  width: 24px
+  height: 17px
+  background: url('../img/icons/css_sprites.png') -69px -5px
   position: relative
   &__counter
     position: absolute
@@ -106,4 +136,6 @@
     font-family: "Harmonia Sans Pro Cyr"
     font-size: 0.625rem
     font-weight: 300
+  &__active
+    background-position: -69px -32px
 

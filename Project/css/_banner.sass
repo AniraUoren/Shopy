@@ -6,6 +6,7 @@
   height: 650px
   background: url("../img/banner1.png") no-repeat right, linear-gradient(#e9e9ec, #f1f1f4)
   background-size: 728px 649px
+  margin-bottom: 121px
   &__wrap
     width: 1200px
     height: 100%
@@ -25,11 +26,16 @@
       background-color: $white
       margin-bottom: 5px
       cursor: pointer
+      &:hover
+        background-color: $orange
+        opacity: 0.5
     &__li-active
       width: 10px
       height: 36px
       background-color: #ff5912
       cursor: default
+      &:hover
+        opacity: 1
     &__link
       font-size: 0rem
 
@@ -67,8 +73,16 @@
     font-family: "Harmonia Sans Pro Cyr"
     font-size: 1.125rem
     text-decoration: none
+    padding-left: 33px
+    position: relative
+    &:before
+      content: ""
+      width: 24px
+      height: 17px
+      position: absolute
+      left: 0
+      top: 0
+      background: url('../img/icons/css_sprites.png') -69px -32px
     &:hover
       text-decoration: underline
-  &__icon
-    width: 24px
-    height: 17px
+
