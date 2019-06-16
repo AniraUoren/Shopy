@@ -1,0 +1,148 @@
+@import "variables"
+@import "mixins"
+@import "fonts"
+
+.arrivals
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  &_el
+    width: 1169px
+    display: flex
+    justify-content: space-between
+  &__header
+    color: $dark_grey_text_main
+    font-family: "Harmonia Sans Pro Cyr"
+    font-size: 2.25rem
+    font-weight: bold
+    text-transform: uppercase
+    &-colored
+      color: $orange
+      font-family: "Harmonia Sans Pro Cyr"
+      font-size: 2.25rem
+      font-weight: bold
+      text-transform: uppercase
+  &__description
+    color: $light_grey_text_p
+    font-family: "Harmonia Sans Pro Cyr"
+    font-size: 1rem
+    font-weight: 400
+    line-height: 1.875rem
+    margin-bottom: 80px
+
+.product
+  margin-bottom: 80px
+  &_el
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 270px
+    height: 365px
+    background-color: $white
+    &:hover
+      box-shadow: 7px 7px 7px #dddddd
+    &:hover .product__image
+      width: 70px
+      height: 87px
+    &:hover .product__description
+      color: $orange
+    &:hover .product__price
+      display: none
+    &:hover .product__size, .product__size a
+      display: inline
+    &:hover .color
+      display: flex
+    &:hover .button
+      display: flex
+  &__image
+    width: 144px
+    height: 216px
+    margin: 30px 0
+  &__description
+    color: $dark_grey_text_main
+    font-family: "Harmonia Sans Pro Cyr"
+    font-size: 1.125rem
+    font-weight: bold
+    margin-bottom: 33px
+  &__price
+    color: $orange
+    font-family: "Harmonia Sans Pro Cyr"
+    font-size: 1.125rem
+    line-height: 0.025rem
+    font-weight: 700
+    margin-bottom: 30px
+  &__size, &__size a
+    display: none
+    color: $dark_grey_text_main
+    font-family: "Harmonia Sans Pro Cyr"
+    font-size: 0.875rem
+    font-weight: 400
+    text-decoration: none
+    margin-bottom: 30px
+  &__size a:hover
+    color: $orange
+
+.button
+  width: 102px
+  height: 21px
+  display: none
+  justify-content: space-between
+  align-items: center
+  &_el
+    font-size: 0px
+  &__share
+    width: 19px
+    height: 17px
+    background: url('../img/icons/css_sprites.png') -103px -5px
+    &:hover
+      background-position: -61px -67px
+  &__add-to-cart
+    width: 22px
+    height: 21px
+    background: url('../img/icons/css_sprites.png') -5px -5px
+    &:hover
+      background-position: -37px -5px
+  &__like
+    width: 19px
+    height: 16px
+    background: url('../img/icons/css_sprites.png') -103px -58px
+    &:hover
+      background-position: -103px -32px
+
+
+.color
+  width: 168px
+  display: none
+  justify-content: center
+  padding-bottom: 30px
+  border-bottom: 1px solid #f2f4f7
+  margin-bottom: 30px
+  &_el
+    width: 14px
+    height: 13px
+    margin-right: 4px
+    border-radius: 7px
+    &:hover
+      box-shadow: 3px 3px 3px #aaaaaa
+  &__red
+    background-color: #e12e3f
+  &__grey
+    background-color: $dark_grey_text_main
+  &__blue
+    background-color: #3ab3ff
+  &__green
+    background-color: #2fd967
+
+.more
+  width: 1170px
+  height: 60px
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $white
+  margin-bottom: 119px
+  &__dot
+    font-size: 12px
+    color: $orange
+    margin-right: 3px
