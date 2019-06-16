@@ -14,12 +14,13 @@
   font-weight: normal;
   font-style: italic; }
 @font-face {
-  font-family: "Harmonia Sans Pro Cyr-light";
+  font-family: "Harmonia Sans Pro Cyr";
   src: url("../fonts/HarmoniaSansProCyr-Light.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 .header {
-  width: 100%; }
+  width: 100%;
+  background-color: #ffffff; }
   .header_el {
     display: flex;
     border-bottom: 1px solid #e6e8eb; }
@@ -39,25 +40,38 @@
   font-size: 0.75rem;
   font-weight: 400;
   text-decoration: none;
-  margin-right: 19px; }
+  padding-left: 27px;
+  margin-right: 19px;
+  position: relative; }
   .mail__link:hover {
     text-decoration: underline; }
-.mail__icon {
-  margin-right: 9px;
-  width: 18px;
-  height: 11px; }
+  .mail__link:before {
+    content: "";
+    width: 18px;
+    height: 11px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    background: url("../img/icons/css_sprites.png") -5px -95px; }
 
 .phone__link {
   font-family: "Harmonia Sans Pro Cyr";
   color: #34404b;
   font-size: 0.75rem;
   font-weight: 400;
-  text-decoration: none; }
+  text-decoration: none;
+  padding-left: 22px;
+  position: relative; }
   .phone__link:hover {
     text-decoration: underline; }
-.phone__icon {
-  width: 12px;
-  height: 12px; }
+  .phone__link:before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url("../img/icons/css_sprites.png") -132px -5px; }
 
 .socials_el {
   margin-left: 15px;
@@ -95,12 +109,29 @@
   .navbar__link:hover {
     color: #ff5912; }
 
+.search {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url("../img/icons/css_sprites.png") -33px -67px; }
+  .search:hover {
+    background-position: -5px -67px; }
+
 .user {
-  margin-left: 30px; }
+  margin-left: 30px;
+  display: block;
+  width: 20px;
+  height: 21px;
+  background: url("../img/icons/css_sprites.png") -35px -36px; }
+  .user:hover {
+    background-position: -5px -36px; }
 
 .cart {
   margin-left: 30px;
   display: block;
+  width: 24px;
+  height: 17px;
+  background: url("../img/icons/css_sprites.png") -69px -5px;
   position: relative; }
   .cart__counter {
     position: absolute;
@@ -117,6 +148,8 @@
     font-family: "Harmonia Sans Pro Cyr";
     font-size: 0.625rem;
     font-weight: 300; }
+  .cart__active {
+    background-position: -69px -32px; }
 
 @font-face {
   font-family: "Harmonia Sans Pro Cyr";
@@ -134,14 +167,15 @@
   font-weight: normal;
   font-style: italic; }
 @font-face {
-  font-family: "Harmonia Sans Pro Cyr-light";
+  font-family: "Harmonia Sans Pro Cyr";
   src: url("../fonts/HarmoniaSansProCyr-Light.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 .banner {
   height: 650px;
   background: url("../img/banner1.png") no-repeat right, linear-gradient(#e9e9ec, #f1f1f4);
-  background-size: 728px 649px; }
+  background-size: 728px 649px;
+  margin-bottom: 121px; }
   .banner__wrap {
     width: 1200px;
     height: 100%;
@@ -161,11 +195,16 @@
       background-color: #ffffff;
       margin-bottom: 5px;
       cursor: pointer; }
+      .banner-buttons__li:hover {
+        background-color: #ff5912;
+        opacity: 0.5; }
     .banner-buttons__li-active {
       width: 10px;
       height: 36px;
       background-color: #ff5912;
       cursor: default; }
+      .banner-buttons__li-active:hover {
+        opacity: 1; }
     .banner-buttons__link {
       font-size: 0rem; }
 
@@ -200,12 +239,348 @@
     color: #ff5912;
     font-family: "Harmonia Sans Pro Cyr";
     font-size: 1.125rem;
-    text-decoration: none; }
+    text-decoration: none;
+    padding-left: 33px;
+    position: relative; }
+    .order-block__link:before {
+      content: "";
+      width: 24px;
+      height: 17px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: url("../img/icons/css_sprites.png") -69px -32px; }
     .order-block__link:hover {
       text-decoration: underline; }
-  .order-block__icon {
-    width: 24px;
-    height: 17px; }
+
+@font-face {
+  font-family: "Harmonia Sans Pro Cyr";
+  src: url("../fonts/HarmoniaSansProCyr-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Harmonia Sans Pro Cyr";
+  src: url("../fonts/HarmoniaSansProCyr-BoldCond.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "Harmonia Sans Pro Cyr";
+  src: url("../fonts/HarmoniaSansProCyr-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: "Harmonia Sans Pro Cyr";
+  src: url("../fonts/HarmoniaSansProCyr-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+.arrivals {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .arrivals_el {
+    width: 1169px;
+    display: flex;
+    justify-content: space-between; }
+  .arrivals__header {
+    color: #34404b;
+    font-family: "Harmonia Sans Pro Cyr";
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-transform: uppercase; }
+    .arrivals__header-colored {
+      color: #ff5912;
+      font-family: "Harmonia Sans Pro Cyr";
+      font-size: 2.25rem;
+      font-weight: bold;
+      text-transform: uppercase; }
+  .arrivals__description {
+    color: #495662;
+    font-family: "Harmonia Sans Pro Cyr";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.875rem;
+    margin-bottom: 80px; }
+
+.product {
+  margin-bottom: 80px; }
+  .product_el {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 270px;
+    height: 365px;
+    background-color: #ffffff; }
+    .product_el:hover {
+      box-shadow: 7px 7px 7px #dddddd; }
+    .product_el:hover .product__image {
+      width: 70px;
+      height: 87px; }
+    .product_el:hover .product__description {
+      color: #ff5912; }
+    .product_el:hover .product__price {
+      display: none; }
+    .product_el:hover .product__size, .product_el .product__size a {
+      display: inline; }
+    .product_el:hover .color {
+      display: flex; }
+    .product_el:hover .button {
+      display: flex; }
+  .product__image {
+    width: 144px;
+    height: 216px;
+    margin: 30px 0; }
+  .product__description {
+    color: #34404b;
+    font-family: "Harmonia Sans Pro Cyr";
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 33px; }
+  .product__price {
+    color: #ff5912;
+    font-family: "Harmonia Sans Pro Cyr";
+    font-size: 1.125rem;
+    line-height: 0.025rem;
+    font-weight: 700;
+    margin-bottom: 30px; }
+  .product__size, .product__size a {
+    display: none;
+    color: #34404b;
+    font-family: "Harmonia Sans Pro Cyr";
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-decoration: none;
+    margin-bottom: 30px; }
+  .product__size a:hover {
+    color: #ff5912; }
+
+.button {
+  width: 102px;
+  height: 21px;
+  display: none;
+  justify-content: space-between;
+  align-items: center; }
+  .button_el {
+    font-size: 0px; }
+  .button__share {
+    width: 19px;
+    height: 17px;
+    background: url("../img/icons/css_sprites.png") -103px -5px; }
+    .button__share:hover {
+      background-position: -61px -67px; }
+  .button__add-to-cart {
+    width: 22px;
+    height: 21px;
+    background: url("../img/icons/css_sprites.png") -5px -5px; }
+    .button__add-to-cart:hover {
+      background-position: -37px -5px; }
+  .button__like {
+    width: 19px;
+    height: 16px;
+    background: url("../img/icons/css_sprites.png") -103px -58px; }
+    .button__like:hover {
+      background-position: -103px -32px; }
+
+.color {
+  width: 168px;
+  display: none;
+  justify-content: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #f2f4f7;
+  margin-bottom: 30px; }
+  .color_el {
+    width: 14px;
+    height: 13px;
+    margin-right: 4px;
+    border-radius: 7px; }
+    .color_el:hover {
+      box-shadow: 3px 3px 3px #aaaaaa; }
+  .color__red {
+    background-color: #e12e3f; }
+  .color__grey {
+    background-color: #34404b; }
+  .color__blue {
+    background-color: #3ab3ff; }
+  .color__green {
+    background-color: #2fd967; }
+
+.more {
+  width: 1170px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  margin-bottom: 119px; }
+  .more__dot {
+    font-size: 12px;
+    color: #ff5912;
+    margin-right: 3px; }
+
+@font-face {
+  font-family: "Harmonia Sans Pro Cyr";
+  src: url("../fonts/HarmoniaSansProCyr-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Harmonia Sans Pro Cyr";
+  src: url("../fonts/HarmoniaSansProCyr-BoldCond.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "Harmonia Sans Pro Cyr";
+  src: url("../fonts/HarmoniaSansProCyr-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: "Harmonia Sans Pro Cyr";
+  src: url("../fonts/HarmoniaSansProCyr-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+.advertising {
+  width: 1170px;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; }
+
+.hot-deal {
+  width: 670px;
+  height: 100px;
+  display: flex;
+  background-color: #ffffff;
+  align-items: center; }
+  .hot-deal__image {
+    width: 80px;
+    height: 80px;
+    margin: 0 62px; }
+  .hot-deal__wrap {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin-right: 60px; }
+  .hot-deal__header {
+    color: #34404b;
+    font-family: "Harmonia Sans Pro Cyr";
+    font-size: 1.375rem;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .hot-deal__description {
+    color: #495662;
+    font-family: "Harmonia Sans Pro Cyr";
+    font-size: 0.75rem;
+    line-height: 1.878rem; }
+  .hot-deal__add-to-cart {
+    color: #ff5912;
+    font-family: "Harmonia Sans Pro Cyr";
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    padding-left: 43px; }
+    .hot-deal__add-to-cart:before {
+      content: "";
+      width: 22px;
+      height: 21px;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      background: url("../img/icons/css_sprites.png") -37px -5px; }
+    .hot-deal__add-to-cart-dollar {
+      font-size: 1.375rem; }
+
+.adv-area {
+  width: 470px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  margin-bottom: 119px; }
+  .adv-area__dark {
+    color: #34404b;
+    font-family: "Harmonia Sans Pro Cyr";
+    font-size: 1rem;
+    font-weight: 400; }
+  .adv-area__orange {
+    color: #ff5912;
+    font-family: "Harmonia Sans Pro Cyr";
+    font-size: 1rem;
+    font-weight: 400; }
+  .adv-area__light {
+    color: #34404b;
+    font-family: "Harmonia Sans Pro Cyr";
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.45rem; }
+
+@font-face {
+  font-family: "Harmonia Sans Pro Cyr";
+  src: url("../fonts/HarmoniaSansProCyr-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Harmonia Sans Pro Cyr";
+  src: url("../fonts/HarmoniaSansProCyr-BoldCond.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "Harmonia Sans Pro Cyr";
+  src: url("../fonts/HarmoniaSansProCyr-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: "Harmonia Sans Pro Cyr";
+  src: url("../fonts/HarmoniaSansProCyr-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+.best-sales {
+  width: 1170px;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .best-sales_header {
+    color: #34404b;
+    font-family: "Harmonia Sans Pro Cyr";
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px; }
+    .best-sales_header__orange {
+      font-size: 2.25rem;
+      font-weight: bold;
+      color: #ff5912; }
+  .best-sales__description {
+    color: #495662;
+    font-family: "Harmonia Sans Pro Cyr";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.874rem;
+    margin-bottom: 80px; }
+  .best-sales__wrap {
+    display: flex;
+    justify-content: space-between; }
+
+.sale-product {
+  text-decoration: none; }
+  .sale-product__wrap {
+    width: 370px;
+    height: 160px;
+    display: flex;
+    background-color: #ffffff;
+    align-items: center; }
+  .sale-product__image {
+    width: 89px;
+    height: 90px;
+    margin-top: 35px;
+    margin-left: 28px; }
+  .sale-product__description {
+    color: #34404b;
+    font-family: "Harmonia Sans Pro Cyr";
+    font-size: 1.125rem;
+    font-weight: 700; }
 
 * {
   padding: 0;
@@ -215,6 +590,7 @@
 
 body {
   padding: 0;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background-color: #f4f6f8; }
 
 /*# sourceMappingURL=style.css.map */
